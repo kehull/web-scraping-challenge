@@ -15,20 +15,42 @@
       <h1>Mission to Mars</h1>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
-    <h2>Latest Mars News</h2>
-    <h3>{{ mars.news_title }}</h3>
-    <h4>{{ mars.news_p }}</h4>
 
-    <h2>Featured Mars Image</h2> 
-    <img src="{{ mars.img_path }}"></img>
+    <div class="container">
+      <div class="row">
+          <div class="col-sm-12">
+            <div class="post">
+            <h2>Latest Mars News</h2>
+            <h3>{{ mars.news_title }}</h3>
+            <h4>{{ mars.news_p }}</h4>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="post">
+            <h2>Featured Mars Image</h2> 
+            <img class="img-thumbnail" src="{{ mars.img_path }}"></img>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="post">
+            <h2>Mars Facts</h2>
+            <table class="table">{{ mars.df_html|safe }}</table>
+          </div>
+        </div>
+      </div>
 
-    <h2>Mars Facts</h2>
-    <table class="table">{{ mars.df_html }}</table>
-
-    <h2>Mars Hemispheres</h2>
-    <!--4x4 grid of mars hemisphere images-->
-  </div>
-  </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="post">
+            <h2>Mars Hemispheres</h2>
+            <!--4x4 grid of mars hemisphere images-->
+            <p>This is where the Mars hemispheres portion of the assignment would go if I hadn't experienced so many technical difficulties outside of my control this week.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
 
 </html>

@@ -53,6 +53,7 @@ def scrape_info():
     df_html = df.to_html()
 
     # SCRAPE HEMISPHERES
+    # will do later if i have time
 
     # STORE DATA IN DICTIONARY
     mars_data = {
